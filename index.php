@@ -8,7 +8,7 @@ $redirectUri = getenv('API_REDIRECT_URL'); //this URL has to be in "Whitelisted 
 $access_token_url_format = "https://%s/admin/oauth/access_token";
 $auth_url_format = "https://%s/admin/oauth/authorize?client_id=%s&scope=%s&redirect_uri=%s";
 
-// pr($_REQUEST, false);
+pr($_REQUEST, false);
 
 //oauth callback url call from shopify
 if (isset($_GET['code']) && isset($_GET['shop'])) {
