@@ -1,9 +1,9 @@
 <?php
 
-$apiKey = 'your-app-key'; //from partner account app settings
-$secret = 'your-secret-key'; //from partner account app settings
-$scope = 'read_products,write_products,write_script_tags,read_price_rules,write_price_rules,read_customers,write_draft_orders'; //required permissions
-$redirectUri = 'https://app-url'; //this URL has to be in "Whitelisted redirection URL(s)" in shopify partner account app setting
+$apiKey = getenv('API_CLIENT_ID'); //from partner account app settings
+$secret = getenv('API_CLIENT_SECRET'); //from partner account app settings
+$scope = getenv('API_SCOPE'); //required permissions
+$redirectUri = getenv('API_REDIRECT_URL'); //this URL has to be in "Whitelisted redirection URL(s)" in shopify partner account app setting
 
 $access_token_url_format = "https://%s/admin/oauth/access_token";
 $auth_url_format = "https://%s/admin/oauth/authorize?client_id=%s&scope=%s&redirect_uri=%s";
